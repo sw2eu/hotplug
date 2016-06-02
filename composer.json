@@ -1,0 +1,19 @@
+{
+	"name": "sw2/hotplug",
+	"license": "BSD",
+	"authors": [
+		{
+			"name": "Lukas Povoda",
+			"email": "lupo112@gmail.com"
+		}
+	],
+	"require": {
+		"nette/application": "^2.3",
+		"nette/bootstrap": "^2.3",
+		"nette/caching": "^2.3",
+		"nette/finder": "^2.3"
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	}
+}
