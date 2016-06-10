@@ -37,8 +37,10 @@ class Configurator extends Nette\Configurator
 			$configs = $this->loadConfigFiles($path);
 			$this->getCache()->save($path, $configs, [Nette\Caching\Cache::FILES => $configs]);
 		}
-		foreach ($configs as $configFile) {
-			$this->addConfig($configFile);
+		$loader = $this->createLoader();
+		foreach ($configs as $file) {
+			$config = Helpers::expand($loader->load($file), 'pluginDir', dirname(dirname($file)));
+			$this->addConfig($config);
 		}
 	}
 
