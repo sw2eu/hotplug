@@ -21,7 +21,7 @@ class Configurator extends Nette\Configurator
 	{
 		if ($this->cache === NULL) {
 			$cacheStorage = new Nette\Caching\Storages\FileStorage($this->getCacheDirectory());
-			$this->cache = new Nette\Caching\Cache($cacheStorage, 'Sw2.Hotplug');
+			$this->cache = new Nette\Caching\Cache($cacheStorage, 'Sw2.HotplugContainer');
 		}
 
 		return $this->cache;
